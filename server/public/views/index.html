@@ -17,7 +17,14 @@
   </head>
   <body>
     <h1>H.O.M.E., LLC</h1>
-    <button type="button" class="btn btn-info btn-lg" id="addListing" data-toggle="modal" data-target="#myModal">Add New</button>
+    <div class="buttonDivs">
+      <button type="button" class="btn btn-info btn-lg" id="addListing" data-toggle="modal" data-target="#myModal">Add New Listing</button>
+    </div>
+    <br></br>
+    <div class="col-md-12" id="keyHeader">
+      <h3>Rentals displayed in blue, Homes displayed in green</h3>
+    </div>
+    <br></br>
     <div id="outputDiv" class="col-md-12">
 
     </div>
@@ -30,26 +37,46 @@
             <h3 class="modal-title">Add Listing</h3>
           </div>
           <div class="modal-body">
-            <div class="rentalButton">
+            <div id="rentalButton" class="buttonDivs">
               <button type="button" class="btn btn-info btn-lg" id="rentalButton">Rental</button>
             </div>
-            <div class="houseButton">
+            <div id="houseButton" class="buttonDivs">
               <button type="button" class="btn btn-info btn-lg" id="houseButton">House</button>
             </div>
             <div id="newRentalForm">
               <form id='newRental' action='index.html' method='post'>
-                Rent:<input type='number' id='rentalPrice'>
-                Sqft:<input type='number' id='rentalSqft'>
-                City:<input type='text' id='rentalCity'>
-                <button type="submit">Submit</button>
+                <div class="col-md-12">
+                  <div class="col-md-4">
+                    Rent:<input type='number' id='rentalPrice'>
+                  </div>
+                  <div class="col-md-4">
+                    Sqft:<input type='number' id='rentalSqft'>
+                  </div>
+                  <div class="col-md-4">
+                    City:<input type='text' id='rentalCity'>
+                  </div>
+                </div>
+                <div class="col-md-12 buttonDivs">
+                  <button type="submit">Submit</button>
+                </div>
               </form>
             </div>
             <div id="newHouseForm">
               <form id='newHouse' action='index.html' method='post'>
-                Cost:<input type='number' id='housePrice'>
-                Sqft:<input type='number' id='houseSqft'>
-                City:<input type='text' id='houseCity'>
-                <button type="submit">Submit</button>
+                <div class="col-md-12">
+                  <div class="col-md-4">
+                    Cost:<input type='number' id='housePrice'>
+                  </div>
+                  <div class="col-md-4">
+                    Sqft:<input type='number' id='houseSqft'>
+                  </div>
+                  <div class="col-md-4">
+                    City:<input type='text' id='houseCity'>
+                  </div>
+                </div>
+                <div class="col-md-12 buttonDivs">
+                  <button type="submit">Submit</button>
+                </div>
               </form>
             </div>
           </div>
@@ -57,9 +84,7 @@
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
         </div>
-
       </div>
     </div>
-
   </body>
 </html>

@@ -1,0 +1,73 @@
+body
+{
+  text-align: center;
+}
+
+h1
+{
+  font-family: serif;
+  font-weight: lighter;
+  font-size: 60px;
+  background-color: wheat;
+}
+
+#keyHeader
+{
+  text-align: center;
+  padding-bottom: 20px;
+  font-style: italic;
+}
+
+.buttonDivs
+{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 80px;
+}
+
+.listingItemWrapper
+{
+  text-align: center;
+  height: 300px;
+  font-size: 30px;
+}
+
+.glyphicon
+{
+  font-size: 50px;
+}
+
+/*
+ALTERNATING COLOR SCHEME OPTION:
+
+.listingItemWrapper:nth-child(odd)>.listingItem
+{
+  background-color: khaki;
+}
+
+.listingItemWrapper:nth-child(even)>.listingItem
+{
+  background-color: lightskyblue;
+}*/
+
+/*Different colors for different kinds of listings*/
+.rentalItem
+{
+  background-color: powderblue;
+  border: 2px solid black;
+  padding-top: 30px;
+  height: 250px;
+}
+
+.houseItem
+{
+  background-color: palegreen;
+  border: 2px solid black;
+  padding-top: 30px;
+  height: 250px;
+}
+
+.modal-title
+{
+  background-color: wheat;
+}

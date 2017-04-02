@@ -26,29 +26,36 @@ function displayListings(res)
   for(var i = 0; i < res.length; i++)
   {
     var listing = res[i];
-    $("#outputDiv").append("<div class='col-md-4'></div>");
-    var $el1 = $("#outputDiv").children().last();
-    $el1.append("<span class='glyphicon glyphicon-home'></span>");
+    $("#outputDiv").append("<div class='col-md-4 listingItemWrapper'></div>");
+    var $el0 = $("#outputDiv").children().last();
     if(listing.cost)
     {
-      displayingHouse($el1, listing);
+      displayingHouse($el0, listing);
     }
     else if(listing.rent)
     {
-      displayingRental($el1, listing);
+      displayingRental($el0, listing);
     }
   }
 }
 
-function displayingHouse($el1, listing)
+function displayingHouse($el0, listing)
 {
+  $el0.append("<div class='col-md-12 rentalItem'></div>");
+  var $el1 = $("#outputDiv").children().children().last();
+  $el1.append("<span class='glyphicon glyphicon-home'></span>");
+
   $el1.append("<div class='row'>" + listing.cost + "</div>");
   $el1.append("<div class='row'>" + listing.sqft + "</div>");
   $el1.append("<div class='row'>" + listing.city + "</div>");
 }
 
-function displayingRental($el1, listing)
+function displayingRental($el0, listing)
 {
+  $el0.append("<div class='col-md-12 houseItem'></div>");
+  var $el1 = $("#outputDiv").children().children().last();
+  $el1.append("<span class='glyphicon glyphicon-home'></span>");
+
   $el1.append("<div class='row'>" + listing.rent + "</div>");
   $el1.append("<div class='row'>" + listing.sqft + "</div>");
   $el1.append("<div class='row'>" + listing.city + "</div>");
@@ -91,15 +98,19 @@ function eventListeners()
 
 function rentalForm()
 {
+  $(".modal-title").text("Add New Rental");
+  $("#houseButton").show();
+  $("#newHouseForm").hide();
   $("#rentalButton").hide();
-  $("houseButton").hide();
   $("#newRentalForm").show();
 }
 
 function houseForm()
 {
-  $("#rentalButton").hide();
-  $("houseButton").hide();
+  $(".modal-title").text("Add New House");
+  $("#rentalButton").show();
+  $("#newRentalForm").hide();
+  $("#houseButton").hide();
   $("#newHouseForm").show();
 }
 
