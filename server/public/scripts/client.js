@@ -94,6 +94,7 @@ function eventListeners()
     newHouse.city = $("#houseCity").val();
     postNewHouse(newHouse);
   });
+
 }
 
 function rentalForm()
@@ -125,6 +126,7 @@ function postNewRental(newRental)
       success: function(res)
       {
         getListings(res);
+        $("#myModal").modal("hide");
       }
     });
 }
@@ -140,6 +142,7 @@ function postNewHouse(newHouse)
       success: function(res)
       {
         getListings(res);
+        $("#myModal").modal("hide");
       }
     });
 }
